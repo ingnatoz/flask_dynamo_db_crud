@@ -1,0 +1,16 @@
+Intalar entorno virtual:        $ pip install virtualenv
+Crear entorno virtual:          $ virtualenv -p python3 env
+Activar entorno virtual:        $ .\env\Scripts\activate
+Enlistar:                       $ pip list
+Para generar  requerimeintos    $ pip3 freeze > requirements.txt
+Para instalar requerimientos    $ pip install -r requirements.txt
+
+---------> Flask <----------
+Install                             $ pip install Flask
+                                    $ pip install boto3
+Run Server                          $ python main.py
+
+--------> Docker <-----
+$ docker-compose build --no-cache flask_back_dynamo
+$ docker-compose up -d flask_back_dynamo
+$ docker-compose exec app flask_back_dynamo
