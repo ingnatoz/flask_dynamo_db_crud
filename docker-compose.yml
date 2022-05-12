@@ -1,10 +1,10 @@
 version: '3.8'
 services:
-  flask_back_dynamo:
+  flask_back:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: flask_back_dynamo
+    container_name: flask_back
     restart: unless-stopped
     ports:
       - "5001:5000"

@@ -10,6 +10,7 @@ def home():
     return jsonify(result), 200
 
 
+# Create table
 @movie_r.route('/create_table')
 def root_route():
     dynamodb.create_table_movie()
@@ -17,6 +18,7 @@ def root_route():
     return jsonify(result), 200
 
 
+# Create row movie
 @movie_r.route('/movie', methods=['POST'])
 def add_movie():
     data = request.get_json()
@@ -35,6 +37,7 @@ def add_movie():
     return jsonify(result)
 
 
+# Get by id
 @movie_r.route('/movie/<int:id>', methods=['GET'])
 def get_movie(id):
     response = dynamodb.read_from_movie(id)
@@ -48,6 +51,7 @@ def get_movie(id):
     }
 
 
+# Update by id
 @movie_r.route('/movie/<int:id>', methods=['PUT'])
 def update_movie(id):
     data = request.get_json()
@@ -79,6 +83,7 @@ def upvote_movie(id):
     }
 
 
+# Delete by id
 @movie_r.route('/movie/<int:id>', methods=['DELETE'])
 def delete_movie(id):
     response = dynamodb.delete_from_movie(id)

@@ -1,4 +1,5 @@
-# Flask,  DynamoDB and Docker CRUD
+# Flask,  DynamoDB CRUD, Docker and Bucket S3 with Boto3 
+
 ## RUN APP
 - docker-compose up -d
 

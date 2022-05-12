@@ -11,6 +11,6 @@ Install                             $ pip install Flask
 Run Server                          $ python main.py
 
 --------> Docker <-----
-$ docker-compose build --no-cache flask_back_dynamo
-$ docker-compose up -d flask_back_dynamo
-$ docker-compose exec app flask_back_dynamo
+$ docker-compose build --no-cache flask_back
+$ docker-compose up -d flask_back
+$ docker-compose exec app flask_back
